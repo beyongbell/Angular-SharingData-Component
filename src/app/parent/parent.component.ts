@@ -10,8 +10,13 @@ export class ParentComponent implements OnInit {
   constructor() { }
 
   message = 'Hello Parent';
+  ChildMessage = 'Wait Child';
 
   ngOnInit() {
+  }
+
+  receiveMessage($event) {
+    this.ChildMessage = $event;
   }
 
 }

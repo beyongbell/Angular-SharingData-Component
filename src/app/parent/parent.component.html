@@ -1,5 +1,6 @@
 <div class="parent">
   <p>parent works!</p>
-  <app-child [message]="message"></app-child>
+  <p>Child {{ ChildMessage }}</p>
+  <app-child [message]="message" (messageEvent)="receiveMessage($event)"></app-child>
 </div>
 
