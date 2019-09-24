@@ -7,6 +7,9 @@ import { ChildComponent } from './child/child.component';
 import { ParentComponent } from './parent/parent.component';
 import { ViewParentComponent } from './view-parent/view-parent.component';
 import { ViewChildComponent } from './view-child/view-child.component';
+import { DataParentComponent } from './data-parent/data-parent.component';
+import { DataChildComponent } from './data-child/data-child.component';
+import { DataService } from './data.service';
 
 @NgModule({
   declarations: [
@@ -14,13 +17,15 @@ import { ViewChildComponent } from './view-child/view-child.component';
     ChildComponent,
     ParentComponent,
     ViewParentComponent,
-    ViewChildComponent
+    ViewChildComponent,
+    DataParentComponent,
+    DataChildComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
